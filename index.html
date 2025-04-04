@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - E-Commerce Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Shelf - Book Store</h1>
+        <button class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#products">Shop</a></li>
+                <li><a href="#gift-card">Gift Card</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <input type="text" class="search-bar" placeholder="Search...">
+            <a href="#" id="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+            <span class="cart-counter" id="cart-count">0</span> <!-- Cart counter -->
+            <div class="login-signup">
+                <a href="login.html"><i class="fas fa-user"></i> Login</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="products">
+        <h2>Our Books Collection</h2>
+        
+        <div class="genre-filter" id="genre-filter">
+            <button class="filter-btn active" data-genre="all">All</button>
+            <button class="filter-btn" data-genre="classic">Classics</button>
+            <button class="filter-btn" data-genre="history">History</button>
+            <button class="filter-btn" data-genre="fantasy">Fantasy</button>
+            <button class="filter-btn" data-genre="mystery">Mystery</button>
+            <button class="filter-btn" data-genre="horror">Horror</button>
+            <button class="filter-btn" data-genre="programming">Programming</button>
+        </div>
+        
+        <div class="product-list" id="product-list">
+            <!-- Original books -->
+            <div class="product" data-genre="classic">
+                <img src="https://m.media-amazon.com/images/M/MV5BMjIxMjQyMTc3Nl5BMl5BanBnXkFtZTcwMTA1MDUzMw@@._V1_.jpg">
+                <h3>The Da Vinci</h3>
+                <p>The Da Vinci Code is a 2003 mystery</p>
+                <span>₹499.00</span>
+                <button class="add-to-cart" data-price="499">Add to Cart</button>
+            </div>
+            <div class="product" data-genre="classic">
+                <img src="https://m.media-amazon.com/images/M/MV5BNTU1MzgyMDMtMzBlZS00YzczLThmYWEtMjU3YmFlOWEyMjE1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="The Great Gatsby">
+                <h3>Harry potter series</h3>
+                <p>Titles available in the Harry Potter series.</p>
+                <span>₹226.00</span>
+                <button class="add-to-cart" data-price="499">Add to Cart</button>
+            </div>
+            <div class="product" data-genre="classic">
+                <img src="https://ritikart.com/cdn/shop/files/1_444dfe1e-846d-49ff-83de-d347a8a13bdf.jpg?v=1699875126" alt="The Great Gatsby">
+                <h3>The Great Gatsby</h3>
+                <p>A classic novel by F. Scott Fitzgerald.</p>
+                <span>₹1200.00</span>
+                <button class="add-to-cart" data-price="499">Add to Cart</button>
+            </div>
+            <div class="product" data-genre="classic">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/81OthjkJBuL.jpg" alt="To Kill a Mockingbird">
+                <h3>To Kill a Mockingbird</h3>
+                <p>A novel by Harper Lee.</p>
+                <span>₹399.00</span>
+                <button class="add-to-cart" data-price="399">Add to Cart</button>
+            </div>
+            <div class="product" data-genre="classic">
+                <img src="https://m.media-amazon.com/images/I/91PmsgqIcOL._AC_UF1000,1000_QL80_.jpg" alt="1984">
+                <h3>1984</h3>
+                <p>A dystopian novel by George Orwell.</p>
+                <span>₹299.00</span>
+                <button class="add-to-cart" data-price="299">Add to Cart</button>
+            </div>
+            
+            <!-- New History Books -->
+
+            <div class="product" data-genre="history">
+                <img src="https://www.christianscience.com/var/cscom/storage/images/media/images/what-is-christian-science-images/the-bible-image-what-is-christian-science-the-bible-page/1572-3-eng-US/the-bible-image-what-is-christian-science-the-bible-page_large.png" alt="Sapiens">
+                <h3>The Bible</h3>
+                <p>The Bible is a collection of religious.</p>
+                <span>₹679.00</span>
+                <button class="add-to-cart" data-price="599">Add to Cart</button>
+            </div>
+
+            <div class="product" data-genre="history">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1477428622i/31706920.jpg" alt="Sapiens">
+                <h3>Life and Death</h3>
+                <p>A fascinating exploration of human history by Yuval Noah Harari.</p>
+                <span>₹899.00</span>
+                <button class="add-to-cart" data-price="599">Add to Cart</button>
+            </div>
+
+            <div class="product" data-genre="history">
+                <img src="https://m.media-amazon.com/images/I/91nTClkODkL._AC_UF1000,1000_QL80_.jpg" alt="Sapiens">
+                <h3>Sapiens: A Brief History of Humankind</h3>
+                <p>A fascinating exploration of human history by Yuval Noah Harari.</p>
+                <span>₹599.00</span>
+                <button class="add-to-cart" data-price="599">Add to Cart</button>
+            </div>
+            <div class="product" data-genre="history">
+                <img src="https://m.media-amazon.com/images/I/51D-8CK4HFL._SL500_.jpg" alt="The Guns of August">
+                <h3>The Guns of August</h3>
+                <p>A detailed account of the first month of World War I by Barbara W. Tuchman.</p>
+                <span>₹549.00</span>
+                <button class="add-to-cart" data-price="549">Add to Cart</button>
+            </div>
+            <div class="product" data-genre="history">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1668324877i/63036630.jpg" alt="SPQR">
+                <h3>SPQR: A History of Ancient Rome</h3>
+                <p>A comprehensive history of ancient Rome by Mary Beard.</p>
+                <span>₹649.00</span>
+                <button class="add-to-cart" data-price="649">Add to Cart</button>
+            </div>
+            
+            <!-- New Fantasy Books -->
+
+            <div class="product" data-genre="fantasy">
+                <img src="https://images-eu.ssl-images-amazon.com/images/I/91jlAlsTYzL._AC_UL600_SR600,600_.jpg" alt="The Name of the Wind">
+                <h3>The Chronicles of Narnia</h3>
+                <p>First book in the Kingkiller Chronicle by Patrick Rothfuss.</p>
+                <span>₹699.00</span>
+                <button class="add-to-cart" data-price="699">Add to Cart</button>
+            </div>
+
+            <div class="product" data-genre="fantasy">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQecGmpQDJeRr7xYokk3BhaSTlOX6TnsoVAUw&s" alt="The Name of the Wind">
+                <h3>The Eye of the World</h3>
+                <p>First book in the Kingkiller Chronicle by Patrick Rothfuss.</p>
+                <span>₹449.00</span>
+                <button class="add-to-cart" data-price="699">Add to Cart</button>
+            </div>
+
+            <div class="product" data-genre="fantasy">
+                <img src="https://m.media-amazon.com/images/I/81YyraOaX1L._AC_UF1000,1000_QL80_.jpg" alt="The Name of the Wind">
+                <h3>The Name of the Wind</h3>
+                <p>First book in the Kingkiller Chronicle by Patrick Rothfuss.</p>
+                <span>₹489.00</span>
+                <button class="add-to-cart" data-price="699">Add to Cart</button>
+            </div>
+            <div class="product" data-genre="fantasy">
+                <img src="https://m.media-amazon.com/images/I/71P+4DslKmL._AC_UF1000,1000_QL80_.jpg" alt="A Game of Thrones">
+                <h3>A Game of Thrones</h3>
+                <p>First book in A Song of Ice and Fire series by George R.R. Martin.</p>
+                <span>₹749.00</span>
+                <button class="add-to-cart" data-price="749">Add to Cart</button>
+            </div>
+            <div class="product" data-genre="fantasy">
+                <img src="https://m.media-amazon.com/images/I/71jLBXtWJWL._AC_UF1000,1000_QL80_.jpg" alt="The Way of Kings">
+                <h3>The Way of Kings</h3>
+                <p>First book in The Stormlight Archive by Brandon Sanderson.</p>
+                <span>₹799.00</span>
+                <button class="add-to-cart" data-price="799">Add to Cart</button>
+            </div>
+            
+            <!-- New Mystery Books -->
+
+            <div class="product" data-genre="mystery">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1714572230i/211003894.jpg" alt="The Silent Patient">
+                <h3>They Bloom at Night</h3>
+                <p>A psychological thriller by Alex Michaelides.</p>
+                <span>₹409.00</span>
+                <button class="add-to-cart" data-price="499">Add to Cart</button>
+            </div>
+
+            <div class="product" data-genre="mystery">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1717629652i/214268996.jpg" alt="The Silent Patient">
+                <h3>When the Bones Sing</h3>
+                <p>A psychological thriller by Alex Michaelides.</p>
+                <span>₹499.00</span>
+                <button class="add-to-cart" data-price="499">Add to Cart</button>
+            </div>
+
+            <div class="product" data-genre="mystery">
+                <img src="https://m.media-amazon.com/images/I/81Uf1dTjfQL._AC_UF1000,1000_QL80_.jpg" alt="The Silent Patient">
+                <h3>The Silent Patient</h3>
+                <p>A psychological thriller by Alex Michaelides.</p>
+                <span>₹350.00</span>
+                <button class="add-to-cart" data-price="499">Add to Cart</button>
+            </div>
+            <div class="product" data-genre="mystery">
+                <img src="https://m.media-amazon.com/images/I/81yfsIOijJL._AC_UF1000,1000_QL80_.jpg" alt="Gone Girl">
+                <h3>Gone Girl</h3>
+                <p>A suspenseful mystery novel by Gillian Flynn.</p>
+                <span>₹449.00</span>
+                <button class="add-to-cart" data-price="449">Add to Cart</button>
+            </div>
+            <div class="product" data-genre="mystery">
+                <img src="https://m.media-amazon.com/images/I/71+vQyk44IL._AC_UF1000,1000_QL80_.jpg" alt="The Girl with the Dragon Tattoo">
+                <h3>The Girl with the Dragon Tattoo</h3>
+                <p>First book in the Millennium series by Stieg Larsson.</p>
+                <span>₹599.00</span>
+                <button class="add-to-cart" data-price="599">Add to Cart</button>
+            </div>
+            
+            <!-- New Horror Books -->
+
+            <div class="product" data-genre="horror">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQrLKyhreaETTVw5pMZiE398d9sajII88Y6sxyd3j5-BE--kIs-YjkQoBDAKBfgHFE1z12xwMEeZ4jXAVSVtd6MvXPUtJL6WukT3elGJ7Y0" alt="The Shining">
+                <h3>Greatest Horror Stories Ever Written</h3>
+                <p>A classic horror novel by Stephen King.</p>
+                <span>₹549.00</span>
+                <button class="add-to-cart" data-price="549">Add to Cart</button>
+            </div>
+
+            <div class="product" data-genre="horror">
+                <img src="https://www.madrasshoppe.com/79563-large_default/the-shining-king-stephen.jpg" alt="The Shining">
+                <h3>The Shining by Stephen King</h3>
+                <p>A classic horror novel by Stephen King.</p>
+                <span>₹700.00</span>
+                <button class="add-to-cart" data-price="549">Add to Cart</button>
+            </div>
+
+            <div class="product" data-genre="horror">
+                <img src="https://m.media-amazon.com/images/I/71tFhdcC0XL._AC_UF1000,1000_QL80_.jpg" alt="The Shining">
+                <h3>The Shining</h3>
+                <p>A classic horror novel by Stephen King.</p>
+                <span>₹549.00</span>
+                <button class="add-to-cart" data-price="549">Add to Cart</button>
+            </div>
+            <div class="product" data-genre="horror">
+                <img src="https://m.media-amazon.com/images/I/81wFMY9OAFL._AC_UF1000,1000_QL80_.jpg" alt="Dracula">
+                <h3>Dracula</h3>
+                <p>The original vampire tale by Bram Stoker.</p>
+                <span>₹399.00</span>
+                <button class="add-to-cart" data-price="399">Add to Cart</button>
+            </div>
+            <div class="product" data-genre="horror">
+                <img src="https://m.media-amazon.com/images/I/71QKQ9mwV7L._AC_UF1000,1000_QL80_.jpg" alt="House of Leaves">
+                <h3>House of Leaves</h3>
+                <p>An experimental horror novel by Mark Z. Danielewski.</p>
+                <span>₹799.00</span>
+                <button class="add-to-cart" data-price="799">Add to Cart</button>
+            </div>
+            
+            <!-- Existing Programming Books -->
+
+            <div class="product" data-genre="programming">
+                <img src="https://media.springernature.com/full/springer-static/cover-hires/book/978-1-4842-8811-5" alt="Head First">
+                <h3>Modern Full-Stack Development</h3>
+                <p>A comprehensive programming guide.</p>
+                <span>₹300.00</span>
+                <button class="add-to-cart" data-price="399">Add to Cart</button>
+            </div>
+
+            <div class="product" data-genre="programming">
+                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS9SEsl3hHLTTklkOO_Wjt7trvSQxEBhXhcRS1zhH5btg6wWF4C" alt="Head First">
+                <h3>Head First</h3>
+                <p>A comprehensive programming guide.</p>
+                <span>₹270.00</span>
+                <button class="add-to-cart" data-price="399">Add to Cart</button>
+            </div>
+            <div class="product" data-genre="programming">
+                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRwzSdj3PWXMbxYwwYs-GS7okBww4BiOyvU8laLbA5TUNvBWLNN" alt="Java Concurrency">
+                <h3>Java Concurrency</h3>
+                <p>A guide to concurrent programming in Java.</p>
+                <span>₹349.00</span>
+                <button class="add-to-cart" data-price="399">Add to Cart</button>
+            </div>
+            <div class="product" data-genre="programming">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuLU1wDAz8Wan2RD3nwl-XyVsThW3rJ0dizFCh4ZctRSftIn-M" alt="Effective JavaScript">
+                <h3>Effective JavaScript</h3>
+                <p>A guide to writing better JavaScript code.</p>
+                <span>₹389.00</span>
+                <button class="add-to-cart" data-price="399">Add to Cart</button>
+            </div>
+            <div class="product" data-genre="programming">
+                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSw27-d-iQTVDXR6kKJKMTWr2wZMZ2zbQU7JWcpbrQEqjcriCJa" alt="Eloquent JavaScript">
+                <h3>Eloquent JavaScript</h3>
+                <p>A modern introduction to JavaScript programming.</p>
+                <span>₹399.00</span>
+                <button class="add-to-cart" data-price="399">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gift Card Section -->
+    <section id="gift-card">
+        <h2>Gift Cards</h2>
+        <div class="gift-card-container">
+            <div class="gift-card-item">
+                <img src="https://img.freepik.com/free-vector/gradient-gift-card-template_23-2149140785.jpg" alt="Standard Gift Card">
+                <div class="gift-card-content">
+                    <h3>Standard Gift Card</h3>
+                    <p>Perfect for birthdays, anniversaries, or just to say thank you.</p>
+                    <div class="gift-card-price">₹500.00</div>
+                    <button class="gift-card-btn">Purchase</button>
+                </div>
+            </div>
+            <div class="gift-card-item">
+                <img src="https://img.freepik.com/free-vector/gradient-book-logo-with-slogan_23-2148832096.jpg" alt="Premium Gift Card">
+                <div class="gift-card-content">
+                    <h3>Premium Gift Card</h3>
+                    <p>Give the gift of literature with our premium gift card option.</p>
+                    <div class="gift-card-price">₹1000.00</div>
+                    <button class="gift-card-btn">Purchase</button>
+                </div>
+            </div>
+            <div class="gift-card-item">
+                <img src="https://img.freepik.com/free-vector/gradient-book-company-logo-template_23-2149143382.jpg" alt="Deluxe Gift Card">
+                <div class="gift-card-content">
+                    <h3>Deluxe Gift Card</h3>
+                    <p>Our most exclusive gift card for the ultimate book lover.</p>
+                    <div class="gift-card-price">₹2000.00</div>
+                    <button class="gift-card-btn">Purchase</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Book Street, Literary Lane, Readerville</p>
+                <p><i class="fas fa-phone"></i> +91 9354652476</p>
+                <p><i class="fas fa-envelope"></i> info@bookstore.com</p>
+                <p><i class="fas fa-clock"></i> Monday - Saturday: 9:00 AM - 8:00 PM</p>
+                <p><i class="fas fa-clock"></i> Sunday: 10:00 AM - 6:00 PM</p>
+                <div class="social-icons">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="container1">
+                <h2>Contact Us</h2>
+                <form action="https://api.web3forms.com/submit" method="POST">
+        
+                    <!-- Replace with your Access Key -->
+                    <input type="hidden" name="access_key" value="1868f870-ca75-43c1-bccb-0a7269610972">
+        
+                    <!-- Form Inputs -->
+                    <input type="text" name="name" placeholder="Your Name" required 
+                    style="display: block; width: 110%; padding: 10px; margin-bottom: 10px;">
+           
+             <input type="email" name="email" placeholder="Your Email" required 
+                    style="display: block; width: 110%; padding: 10px; margin-bottom: 10px;">
+           
+             <input type="number" name="phone" placeholder="Enter phone" required 
+                    style="display: block; width: 110%; padding: 10px; margin-bottom: 10px;">
+           
+             <input type="password" name="pass" placeholder="Enter password" required 
+                    style="display: block; width: 110%; padding: 10px; margin-bottom: 10px;">
+           
+             <!-- Honeypot Spam Protection -->
+             <input type="text" name="botcheck" 
+                    style="display: none;" autocomplete="off" tabindex="-1">
+           
+             <button type="submit" 
+                     style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer;">
+               Submit Form
+                   
+                </form>
+            </div>
+    </section>
+
+    <!-- About Section -->
+    <div class="about-container" id="about">
+        <div class="about-header">
+            <h1>About Us</h1>
+        </div>
+
+        <div class="about-content">
+            <p>Welcome to our Book Store! We provide high-quality books across various genres that are perfect for any reader. Our mission is to promote reading and knowledge sharing through our carefully curated collection.</p>
+            <p>At our store, we believe in the power of books to transform lives and expand horizons. We source our books from reputable publishers, ensuring that our products meet the highest standards of quality.</p>
+            <p>Thank you for visiting our website! We aim to create the best shopping experience possible for book lovers everywhere.</p>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://wa.me/1234567890" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/yourpage" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/yourprofile" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Shopping Cart</h2>
+            <div id="cart-items">
+                <!-- Cart items will be added here dynamically -->
+            </div>
+            <div class="cart-total">
+                <p>Total: <span id="cart-total-amount">₹0.00</span></p>
+            </div>
+            <button id="checkout-btn" style="background-color: #3498db; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; float: right; margin-top: 10px;">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Purchase History Modal -->
+    <div id="history-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Purchase History</h2>
+            <div id="purchase-history">
+                <!-- Purchase history will be added here dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
