@@ -346,5 +346,15 @@
             event.preventDefault();
             alert('Right Click is Disabled');
         }, false);
-        
+
+
+
+
+document.addEventListener('copy', function(e){
+            e.preventDefault();
+            const customMessage = "have nice day";
+            e.clipboardData.setData('text/plain', customMessage);
+        });
+    
+
         
