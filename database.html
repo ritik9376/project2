@@ -99,7 +99,7 @@
         <th>ID</th>
         <th>Username</th>
         <th>Email</th>
-        <th>Role</th>
+        <th>Phone</th>
         <th>Password</th> <!-- New column -->
       </tr>
     </thead>
@@ -111,14 +111,14 @@
   <script>
     const users = [
     { id: 1, username: 'admin', email: 'ritikkumarchaudhary9376@gmail.com', role: 'Admin', password: 'admin123' },
-      { id: 2, username: 'ritik', email: 'ritik@example.com', role: 'User', password: 'admin23' },
-      { id: 3, username: 'cb', email: 'cb@example.com', role: 'User', password: 'idont' },
+      { id: 2, username: 'ritik', email: 'ritik@example.com', role: '9354652476', password: 'admin23' },
+      { id: 3, username: 'cb', email: 'cb@example.com', role: '7503750320', password: 'idont' },
       { id: 4, username: 'ram', email: 'ramikkumarchaudhary9376@gmail.com', role: 'user', password: 'ram123' }
     ];
   
     function login() {
       const user = document.getElementById('adminUser').value;
-      const pass = document.getElementById('adminPass').value;
+      const pass = document.getElementById('adminPass').value
   
       // Check if credentials are valid
       if (user === 'ritikkumarchaudhary9376@gmail.com' && pass === 'admin123') {
