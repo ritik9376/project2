@@ -1,88 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff; /* Light blue background */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      position: relative;
+    }
 
-        .container1 {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 350px;
-            text-align: center;
-        }
+    .floating-item {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      animation: floatItem 20s linear infinite;
+      opacity: 0.6;
+      pointer-events: none;
+    }
 
-        h2 {
-            color: #333;
-        }
+    @keyframes floatItem {
+      0% {
+        transform: translateY(0) scale(1) rotate(0deg);
+        opacity: 0.4;
+      }
+      50% {
+        transform: translateY(-100px) scale(1.2) rotate(20deg);
+        opacity: 0.9;
+      }
+      100% {
+        transform: translateY(0) scale(1) rotate(-20deg);
+        opacity: 0.4;
+      }
+    }
 
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-            box-sizing: border-box;
-        }
+    .container1 {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 350px;
+      text-align: center;
+      z-index: 1;
+      position: relative;
+    }
 
-        textarea {
-            height: 100px;
-            resize: none;
-        }
+    h2 {
+      color: #333;
+    }
 
-        button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-            font-size: 16px;
-        }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
 
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container1">
-        <h2>Create a Account</h2>
-        <form action="https://api.web3forms.com/submit" method="POST">
+  <!-- JavaScript-generated floating icons -->
+  <script>
+    const icons = [
+      'https://cdn-icons-png.flaticon.com/512/29/29302.png', // Book
+      'https://cdn-icons-png.flaticon.com/512/3194/3194652.png', // Pencil
+      'https://cdn-icons-png.flaticon.com/512/685/685662.png', // Paper
+      'https://cdn-icons-png.flaticon.com/512/763/763768.png', // Ruler
+      'https://cdn-icons-png.flaticon.com/512/174/174859.png', // Pen
+      'https://cdn-icons-png.flaticon.com/512/2202/2202112.png', // Calculator
+      'https://cdn-icons-png.flaticon.com/512/138/138281.png', // Eraser
+      'https://cdn-icons-png.flaticon.com/512/3159/3159066.png' // Notebook
+    ];
 
-            <!-- Replace with your Access Key -->
-            <input type="hidden" name="access_key" value="1868f870-ca75-43c1-bccb-0a7269610972">
+    for (let i = 0; i < 50; i++) {
+      const item = document.createElement('div');
+      item.className = 'floating-item';
+      item.style.top = `${Math.random() * 100}%`;
+      item.style.left = `${Math.random() * 100}%`;
+      item.style.animationDelay = `${Math.random() * 20}s`;
+      item.style.transform = `scale(${0.8 + Math.random() * 0.5})`;
+      item.style.backgroundImage = `url('${icons[Math.floor(Math.random() * icons.length)]}')`;
+      document.body.appendChild(item);
+    }
+  </script>
 
-            <!-- Form Inputs -->
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            
-            <input type="number" name="phone" placeholder="Enter phone" required>
-
-            <input type="text" name="pass" placeholder="Enter password" required>
-
-            <!-- Honeypot Spam Protection -->
-            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
-            <button type="submit">Submit Form</button>
-            <p>Don't have an account? <a href="login.html"> Login</a></p>
-        </form>
-    </div>
+  <!-- Form container -->
+  <div class="container1">
+    <h2>Create an Account</h2>
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="1868f870-ca75-43c1-bccb-0a7269610972">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="number" name="phone" placeholder="Enter phone" required>
+      <input type="password" name="pass" placeholder="Enter password" required>
+      <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+      <button type="submit">Submit Form</button>
+      <p>Don't have an account? <a href="login.html">Login</a></p>
+    </form>
+  </div>
 
 </body>
 </html>
